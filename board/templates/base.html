@@ -1,10 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0//EN" "http://www.w3.org/TR/REC-html40/strict.dtd"> 
-<html lang="EN"> 
-  <head> 
-    <title>Message Board - {% block title %} {% endblock %}</title> 
-  </head> 
+<!DOCTYPE html>
+  <head>
+    <title>Message Board - {% block title %} {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
   <body>
     <h1>Message Board</h1>
+    {% include('_navigation.html') %}
     <section>
       <header>
         {% block header %} {% endblock header %}
@@ -13,5 +14,5 @@
         {% block content %}<p>No Messages</p> {% endblock content %}
       </main>
    </section>
-  </body> 
+  </body>
 </html>
